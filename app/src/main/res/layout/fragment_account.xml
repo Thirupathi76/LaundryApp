@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/dark_blue"
+        card_view:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal">
+
+            <com.marolix.laundryapp.font.TextView_UbuntuLight
+                android:id="@+id/toolbar_title_text_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:padding="15dp"
+                android:text="@string/text_home_account"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/greenish" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/account_name_textView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toLeftOf="@+id/account_profile_imageView"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:padding="3dp"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                    android:textColor="@color/white" />
+
+                <com.marolix.laundryapp.font.TextView_AvenirLTStd_Light
+                    android:id="@+id/account_edit_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_name_textView"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:padding="3dp"
+                    android:text="@string/text_view_edit"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/greenish" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/account_profile_imageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@color/light_grey"
+                    card_view:civ_border_color="@color/greenish"
+                    card_view:civ_border_width="2dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_manage_address_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgMA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/manage_address" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/txtMA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgNxtMA"
+                    android:layout_toRightOf="@+id/imgMA"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_manage_addresses"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <ImageView
+                    android:id="@+id/imgNxtMA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="15dp"
+                    android:src="@drawable/test_dr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_coupon_codes_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/coupon_code" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/txtCC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgNxtCC"
+                    android:layout_toRightOf="@+id/imgCC"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_coupon_codes"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <ImageView
+                    android:id="@+id/imgNxtCC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="15dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_share_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/share" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/txtS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgNxtS"
+                    android:layout_toRightOf="@+id/imgS"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_share"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <ImageView
+                    android:id="@+id/imgNxtS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="15dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_help_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/help" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/txtH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgNxtH"
+                    android:layout_toRightOf="@+id/imgH"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_help"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <ImageView
+                    android:id="@+id/imgNxtH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="15dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_faq_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/faq" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/txtF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgNxtF"
+                    android:layout_toRightOf="@+id/imgF"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_faq"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <ImageView
+                    android:id="@+id/imgNxtF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="15dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_about_us_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgAU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/about_us" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:id="@+id/txtAU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgNxtAU"
+                    android:layout_toRightOf="@+id/imgAU"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_about_us"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <ImageView
+                    android:id="@+id/imgNxtAU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="15dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_sign_out_linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/dark_blue"
+                android:orientation="horizontal">
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/text_sign_out"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

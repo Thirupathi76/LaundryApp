@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/dark_blue_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/view_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="center"
+                android:id="@+id/profile_image_imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:src="@color/light_grey"
+                android:layout_centerInParent="true"
+                app:civ_border_color="@color/greenish"
+                app:civ_border_width="2dp" />
+
+            <com.marolix.laundryapp.font.TextView_UbuntuRegular
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/greenish"
+                android:id="@+id/profile_image_add_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/change_profile_picture"
+                android:layout_below="@+id/profile_image_imageView"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="true" />
+        </RelativeLayout>
+
+        <View
+            android:background="@color/view_color"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/view_color"
+            android:background="@color/dark_blue"
+            android:padding="15dp"
+            android:focusable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.marolix.laundryapp.font.EditText_UbuntuLight
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/white"
+                android:id="@+id/profile_full_name_editText"
+                android:background="@color/dark_blue"
+                android:padding="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_full_name"
+                android:maxLines="1"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:background="@color/view_color"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/view_color"
+            android:background="@color/dark_blue"
+            android:padding="15dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.marolix.laundryapp.font.EditText_UbuntuLight
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/white"
+                android:id="@+id/profile_email_editText"
+                android:background="@color/dark_blue"
+                android:padding="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:maxLines="1"
+                android:inputType="textCapWords"
+                android:imeOptions="actionDone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:background="@color/view_color"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/view_color"
+            android:background="@color/dark_blue"
+            android:padding="15dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.marolix.laundryapp.font.EditText_UbuntuLight
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/white"
+                android:id="@+id/profile_phone_number_editText"
+                android:background="@color/dark_blue"
+                android:padding="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_phone"
+                android:maxLines="1"
+                android:inputType="number"
+                android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:background="@color/view_color"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <com.marolix.laundryapp.font.TextView_UbuntuRegular
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/dark_blue"
+        android:gravity="center"
+        android:id="@+id/profile_save_textView"
+        android:background="@color/greenish"
+        android:padding="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_changes"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="true" />
+</RelativeLayout>

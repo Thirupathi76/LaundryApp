@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dark_blue_bg"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dark_blue_bg">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/dark_blue_bg">
+
+                        <View
+                            android:id="@+id/mv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/dark_blue" />
+
+                        <LinearLayout
+                            android:id="@+id/statusLL"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/LL1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imgPicked"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/scooter_dr_greenish"
+                                    android:gravity="center" />
+
+                                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                                    android:id="@+id/txtPicked"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:text="Pickup Assigned"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:textColor="@color/greenish" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LL2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imgWashing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/washing_dr_greenish"
+                                    android:gravity="center" />
+
+                                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                                    android:id="@+id/txtWashing"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:text="Washing"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:textColor="@color/greenish" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LL3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imgDispatched"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/deliver_dr_greenish"
+                                    android:gravity="center" />
+
+                                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                                    android:id="@+id/txtDispatched"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:text="Dispatched"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:textColor="@color/greenish" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LL4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imgDelivered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/delivered_dr_greenish"
+                                    android:gravity="center" />
+
+                                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                                    android:id="@+id/txtDelivered"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:text="Delivered"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:textColor="@color/greenish" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/createdRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgOC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/circle_tick_dr" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/txtOC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgOC"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Order Created"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtOC"
+                        android:layout_below="@+id/txtOC"
+                        android:paddingLeft="10dp"
+                        android:text="Your order has been created successfully"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pickedRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgOR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/circle_tick_dr" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/txtOR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgOR"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Pickup Assigned"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtOR"
+                        android:layout_below="@+id/txtOR"
+                        android:paddingLeft="10dp"
+                        android:text="Pickup boy has been assigned for your order."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/washingRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/circle_tick_dr" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/txtW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgW"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/text_status_washing"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtW"
+                        android:layout_below="@+id/txtW"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/your_clothes_are_being_washed"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dispatchedRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/circle_tick_dr" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/txtDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgDis"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/text_status_dispatched"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtDis"
+                        android:layout_below="@+id/txtDis"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/your_order_has_been_dispatched"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/deliveredRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgDel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/circle_tick_dr" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/txtDel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgDel"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/text_status_delivered"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtDel"
+                        android:layout_below="@+id/txtDel"
+                        android:paddingLeft="10dp"
+                        android:text="@string/your_order_has_been_delivered"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_text_color" />
+                </RelativeLayout>
+
+                <com.marolix.laundryapp.font.TextView_UbuntuLight
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/address"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/greenish" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuMedium
+                        android:id="@+id/summary_pickup_address_textView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textAllCaps="true"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuRegular
+                        android:id="@+id/summary_pickup_date_textView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/grey_text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Items"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/greenish" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/totalQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="end"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/greenish" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/summary_items_list_recycler_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_grey_textview"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+                <com.marolix.laundryapp.font.TextView_UbuntuRegular
+                    android:id="@+id/summary_no_items_text_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/text_no_products_summary"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/greenish"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.marolix.laundryapp.font.TextView_UbuntuLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Bill"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/greenish" />
+
+            <LinearLayout
+                android:id="@+id/billing_details_linearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_grey_textview"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:maxLines="1"
+                        android:text="@string/text_your_total"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/black" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/summary_total_amount_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:maxLines="1"
+                        android:text="@string/text_extra_Services"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/summary_extra_service_amount_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:maxLines="1"
+                        android:text="@string/text_delivery"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/summary_delivery_amount_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/summary_coupon_applied_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:maxLines="1"
+                        android:text="@string/text_coupon_code"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/summary_coupon_amount_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/greenish" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:maxLines="1"
+                        android:text="To Pay"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuBold
+                        android:id="@+id/summary_final_amount_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/summary_paid_linearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:maxLines="1"
+                        android:text="@string/text_paid_via"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/black" />
+
+                    <com.marolix.laundryapp.font.TextView_UbuntuLight
+                        android:id="@+id/summary_paid_via_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.marolix.laundryapp.font.TextView_UbuntuLight
+                android:id="@+id/summary_cancel_order_textView"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/text_cancel_order"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/categories_row_LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5.0dip"
+    android:layout_marginTop="5.0dip"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.marolix.laundryapp.font.TextView_AvenirLTStd_Book
+            android:id="@+id/summary_product_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="start"
+            android:padding="5.0dip"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textColor="@color/dark_blue" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <com.marolix.laundryapp.font.TextView_AvenirLTStd_Book
+                android:id="@+id/summary_product_quantity_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:padding="5.0dip"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <com.marolix.laundryapp.font.TextView_AvenirLTStd_Book
+                android:id="@+id/summary_product_price_textView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end|center"
+                android:padding="5.0dip"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:padding="5.0dip">
+
+        <com.marolix.laundryapp.font.TextView_UbuntuRegular
+            android:id="@+id/summary_product_stain_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_stain"
+            android:textColor="@color/grey_text_color"
+            android:textSize="12.0sp" />
+
+        <com.marolix.laundryapp.font.TextView_UbuntuRegular
+            android:id="@+id/summary_product_starch_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | Starch-A"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_text_color"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/lightest_grey" />
+</LinearLayout>
